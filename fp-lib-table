@@ -1,0 +1,9 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "digikey-footprints")(type "KiCad")(uri "/home/raven/gitrepos/pcb/digikey-kicad-library/digikey-footprints.pretty")(options "")(descr ""))
+  (lib (name "SJ-3524-SMT")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/SJ-3524-SMT")(options "")(descr ""))
+  (lib (name "SN74AC74PW")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/SN74AC74PW")(options "")(descr ""))
+  (lib (name "AD8129ARZ")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/ul_AD8129ARZ/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "AD8226")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/ul_AD8226ARZ-R7/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "AP2120N")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/ul_AP2120N-2-5TRG1/KiCADv6/footprints.pretty")(options "")(descr ""))
+)
