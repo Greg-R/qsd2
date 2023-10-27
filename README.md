@@ -4,10 +4,10 @@ This is the PCB for the QSD2 receiver module for the T41 "Software Defined Trans
 The PCB was designed using the open-source design tool Kicad 7.
 
 The QSD2 evolved from the original V010 design which remains the most recently published
-receiver module for the T41.
+receiver module for the T41 Software Defined Transceiver.
 
 The goals of the QSD2 are to improve receiver performance, and in particular, the performance
-on the 10 meter amateur radio band.
+in the 10 meter amateur radio band.
 
 Gerber files for PCB fabrication are included in the gerbers folder.
 A PDF of the schematic is included for quick viewing of the circuit design.
@@ -181,9 +181,11 @@ by Albert F. Peter, AC8GY, and Dr. Jack Purdum, W8TEE.  This is the ultimate res
 Transceiver:  <https://www.amazon.com/Software-Defined-Radio-Transceiver-Construction/dp/B09WYP1ST8>
 2.  "A Software Defined Radio for the Masses, Part 4" by Gerald Youngblood, AC5OG.  This shows the circuit for the double-balanced
 demodulator circuit and the use of instrumentation amplifiers on the output circuit.
+<https://www.arrl.org/files/file/Technology/tis/info/pdf/030304qex020.pdf>
 3.  The Rod Gatehouse 2022 transceiver website:  https://ad5gh.wordpress.com/2022-sdr-transceiver/
 Rod took the original T41 SDT design and evolved it into a high-performance digital mode radio.  Excellent circuit upgrades!
 4.  "The Lentz Receiver: Tayloe Evolved" by H. Scott Lentz, AG7FF.  An interesting discussion of several design features of the
 "Lentz Receiver" which improve the performance of the typical "Tayloe Detector" style HF receiver.
+<https://www.arrl.org/files/file/QEX_Next_Issue/2023/05%20may-jun%202023/05%202023%20TofC.pdf>
 
 
