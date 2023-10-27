@@ -10,7 +10,7 @@ The goals of the QSD2 are to improve receiver performance, and in particular, th
 in the 10 meter amateur radio band.
 
 Gerber files for PCB fabrication are included in the gerbers folder.
-A PDF of the schematic is included for quick viewing of the circuit design.
+A PDF of the schematic (qsd2.pdf) is included for quick viewing of the circuit design.
 
 ## Divide-by-2 versus Divide-by-4
 
@@ -43,7 +43,7 @@ QSD2 resolves the high frequency problem by using a divide-by-2 quadrature circu
 
 (28.510 MHz + 48 kHz) * 2 = 57.116 MHz
 
-This is well within the frequency specification of the 74AC74 flip-flop IC even with VCC = 3.3 volts.
+This is well within the frequency specification of the 74AC74 flip-flop IC even with Vcc = 3.3 volts.
 
 ## Implementation of the Divide-by-2 Quadrature
 
