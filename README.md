@@ -69,6 +69,9 @@ So we have to add two these inexpensive devices in addition to the same flip-flo
 
 The divide-by-2 circuit was simulated and found to produce acceptable quadrature.
 
+For optimal quadrature circuit performance, the coaxial cable between the Main board and the QSD2 should be
+as short as possible.
+
 ### Software Modifications
 
 Another complication of the divide-by-two is that the circuit must be properly reset prior to application
