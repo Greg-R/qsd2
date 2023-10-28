@@ -15,6 +15,10 @@ performance of this receiver module.  What you see is what you get!
 Gerber files for PCB fabrication are included in the gerbers folder.
 A PDF of the schematic (qsd2.pdf) is included for quick viewing of the circuit design.
 
+Please note that the components used in this design increase the cost compared to the
+original design.  However, the board is easier to build.  A link to a public Digikey
+BOM is included so that the prospective builder can evaluate the cost before proceeding.
+
 ## Divide-by-2 versus Divide-by-4
 
 The original QSD uses a divide-by-4 quadrature LO generator circuit.  This is a robust
@@ -159,6 +163,12 @@ The power supplies routed through the 16 wire ribbon cable are prone to noise, m
 Extra decoupling components were added to clean up the power supplies.  This has been noted in a lower noise floor
 of the displayed spectrum.
 
+### Option for 3.3 or 5.0 Volts Biasing
+
+A zero ohm jumper is placed to select either 3.3 or 5.0 volt supply bias to the quadrature and demodulator devices.
+It is also necessary to change the instrumentation amplifier reference regulators depending on the the chosen bias voltage.
+Use 1.8 volt regulators with 3.3 volt bias, or a 2.5 volt regulator with 5.0 volt bias.
+
 ### Connectors
 
 The I/Q output connector is changed to surface mount.  The RF SMA connectors are the same, or they can be changed to right-angle
@@ -173,6 +183,17 @@ The layout in the quadrature generator and demodulator areas was very carefully 
 The QSD2 is approximately the same board size as V010, but there is enough area to add additional circuitry if desired.
 
 The prototype PCBs were fabricated by PCBWay at a cost of US$1.00 each.  Shipping was about US$25.00 for quantity 5 boards.
+
+## Bill Of Material (BOM)
+
+A public Digikey BOM is here:
+
+<https://www.digikey.com/en/mylists/list/K5OIGZF85K>
+
+This BOM includes parts to build a board with 5.0 volt biasing.  This is assumed to be the highest performance configuration.
+
+Please note that specific parts may or may not be available when attempting to order.  It is the responsibility of the builder
+to find subsitutes as required.
 
 ## References and Further Reading
 
