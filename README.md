@@ -7,7 +7,10 @@ The QSD2 evolved from the original V010 design which remains the most recently p
 receiver module for the T41 Software Defined Transceiver.
 
 The goals of the QSD2 are to improve receiver performance, and in particular, the performance
-in the 10 meter amateur radio band.
+in the 10 meter amateur radio band.  Please note that the designer of this project does not
+own a laboratory full of expensive test equipment.  Much of the verification of the receiver
+performance has been done "on the air".  There are no guarantees or other warranties of the
+performance of this receiver module.  What you see is what you get!
 
 Gerber files for PCB fabrication are included in the gerbers folder.
 A PDF of the schematic (qsd2.pdf) is included for quick viewing of the circuit design.
