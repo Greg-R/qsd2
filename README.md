@@ -89,6 +89,10 @@ The software modification is equally simple.  The reset is toggled prior to the 
 signal at radio power-up.  That is all that is required to guarantee that the divide-by-2 quadrature circuit is
 properly initialized.  This is a common and practically universal requirement for digital circuitry.
 
+There is no change to the calibration code.  In fact, the divide factors can be mixed.  For example, a divide-by-2
+QSD2 can be used with a divide-by-4 QSE.  As long as the correct divide factors are used, calibration will work
+perfectly.
+
 A link to the modified T41 software will be posted here soon.
 
 ## A Summary of Methods to Extend the T41 Frequency Range
