@@ -202,6 +202,71 @@ This BOM includes parts to build a board with 5.0 volt biasing.  This is assumed
 Please note that specific parts may or may not be available when attempting to order.  It is the responsibility of the builder
 to find subsitutes as required.
 
+## Build Tips
+
+In general, QSE2 is easier to build than the original V010/V011 series boards.  There are a few items to be aware of to avoid
+build errors.
+
+The most probable error(s) are correct orientation of the flip-flop, multiplexer, transformer, and instrumentation amplifier devices.
+The pin 1 markings on the devices are very difficult to see.  Unfortunately, the pin 1 marks on the V1.0 PCB are missing for U2, the
+multiplexer, and for U5, one of the instrumentation ICs.  The transformer markings are easy to read; this should be clear in the
+photograph of the finished board.
+
+There are also 3 leaded electrolytic capacitors.  The markings for these parts are clear on the PCB.
+
+Here are details on each part with regards to proper orientation of the board.  The descriptions are viewing the top side of the board,
+with the "T41 EXPERIMENTERS PLATFORM" near the bottom of the board in normal left-to-right reading orientation.
+
+### Transformer TR1
+
+The transformer TR1 should be placed with the "dot" at the upper right corner.  The textual markings will be upside down.
+
+### 74AC74 Dual Flip-Flop U4
+
+Pin 1 should be in the lower right corner.  This is marked with a small white dot on the PCB.
+
+### 3253 Multiplexer U3
+
+No marking for Pin 1 is on the board.  Pin 1 is at the upper left.  The part I used has a bar on the Pin 1 end.  So the part is placed
+with the bar up, towards the flip-flop device.
+
+### Instrumentation Amplifiers AD8226 U5 and U6
+
+Only U5 has the Pin 1 indicated with a dot on the PCB.  However, both parts are oriented the same, with Pin 1 towards the upper left.
+There is a dot on the parts to indicated Pin 1, however, it is very hard to see.  The package is beveled on the Pin 1 side; this is easy to see.
+
+### Non-placed Parts
+
+C20 and C21 are not used.
+
+R29 and R30 are zero-ohm jumpers.  Place R29 for 5.0 volt bias on the quadrature generator.  This is the recommended configuration.
+Don't place R30 which is the 3.3 volt jumper.
+
+### Bottom Side Parts
+
+There are 3 capacitors and 1 resistor on the bottom side.  These should be soldered last.  I was able to use a hot air gun without
+any problems with the top-side components desoldering.
+
+### SMA Connectors
+
+Take a good look at the placement of the board in your T41 radio.  You will want the SMA connectors of the QSD2 in the orientation for
+easy coaxial cable routing.  I used 90 degree connectors as this was the easiest for extensive testing, but not necessarily the best for
+permanent installation.  Also, you may choose to put the SMAs on one side or the other for optimal cable routing.
+
+Please note that the cable from the Main board to J1, which is the receive local oscillator, should be as short as possible.
+
+### High Resolution Photos of QSD2
+
+Links to photos of a fully constructed QSD2 follow.
+
+<https://drive.google.com/file/d/1xf6yhk0A5sCjX5wh1JE4dn1bHuM8j0T6/view?usp=sharing>
+
+<https://drive.google.com/file/d/1N_Db95VSrJVtja7tjd8az9CCwICfp4F0/view?usp=sharing>
+
+<https://drive.google.com/file/d/1DRWaFW7d4UvI1i016jCJsevu2qg0vANx/view?usp=sharing>
+
+<https://drive.google.com/file/d/14mD85wMKtzQJTBV6h13MQaz7uZWobGtN/view?usp=sharing>
+
 ## References and Further Reading
 
 The QSD2 is an attempt to integrate the best circuits from several sources into a high-performance HF receiver module.

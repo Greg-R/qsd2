@@ -5225,6 +5225,8 @@
     )
   )
 
+  (gr_circle (center 138.75 62.85) (end 138.95 62.85)
+    (stroke (width 0.15) (type solid)) (fill solid) (layer "F.SilkS") (tstamp ca0ddebe-7539-4c89-a3b2-7a840ec01654))
   (gr_circle (center 195.75 110.9) (end 197.75 110.9)
     (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts") (tstamp 090b3e4f-950b-45e5-9879-13864d65b8df))
   (gr_rect (start 99.2 39.6) (end 199.2 114.6)
