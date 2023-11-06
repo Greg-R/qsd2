@@ -267,6 +267,17 @@ Links to photos of a fully constructed QSD2 follow.
 
 <https://drive.google.com/file/d/14mD85wMKtzQJTBV6h13MQaz7uZWobGtN/view?usp=sharing>
 
+### Main Board Wire for Flip-Flop Reset
+
+A wire needs to be added to the main board for resetting the dual flip-flop at power on.
+The wire is connected to pin 0 of the Teensy.  Note that I also added a shunt bypass capacitor to ground.  A zero-ohm resistor
+was required to reach ground.  The other end of the wire connects to pin 1 of the 16-pin IDC connector.  It might be better
+to tack the bypass connector to that end of the wire.  In any case, be careful while soldering the wire because it is directly
+connected to the Teensy.  Follow good ESD procedures to make sure the Teensy is not damaged.
+Here is a high resolution image of the Main board.  The reset wire is blue.
+
+<https://drive.google.com/file/d/1hGLFVzCbjHw2UNAi1ffdGSL7jEQ02EJ3/view?usp=sharing>
+
 ## References and Further Reading
 
 The QSD2 is an attempt to integrate the best circuits from several sources into a high-performance HF receiver module.
