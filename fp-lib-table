@@ -6,4 +6,5 @@
   (lib (name "AD8129ARZ")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/ul_AD8129ARZ/KiCADv6/footprints.pretty")(options "")(descr ""))
   (lib (name "AD8226")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/ul_AD8226ARZ-R7/KiCADv6/footprints.pretty")(options "")(descr ""))
   (lib (name "AP2120N")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/ul_AP2120N-2-5TRG1/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "16TSOP")(type "KiCad")(uri "/home/raven/gitrepos/pcb/downloaded_parts/KiCADv6/footprints.pretty")(options "")(descr ""))
 )

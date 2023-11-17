@@ -5231,7 +5231,7 @@
     (property "Value" "SN74CBT3253" (at 113.7159 89.535 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_SO:SSOP-16_4.4x5.2mm_P0.65mm" (at 111.76 104.14 0)
+    (property "Footprint" "16TSOP:DBQ16-L" (at 111.76 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.ti.com/lit/gpn/sn74cbt3253" (at 111.76 104.14 0)
