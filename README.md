@@ -204,10 +204,10 @@ to find subsitutes as required.
 
 ## Build Tips
 
-In general, QSE2 is easier to build than the original V010/V011 series boards.  There are a few items to be aware of to avoid
+In general, QSD2 is easier to build than the original V010/V011 series boards.  There are a few items to be aware of to avoid
 build errors.
 
-The most probable error(s) are correct orientation of the flip-flop, multiplexer, transformer, and instrumentation amplifier devices.
+The most probable error(s) are incorrect orientation of the flip-flop, multiplexer, transformer, and instrumentation amplifier devices.
 The pin 1 markings on the devices are very difficult to see.  Unfortunately, the pin 1 marks on the V1.0 PCB are missing for U2, the
 multiplexer, and for U5, one of the instrumentation ICs.  The transformer markings are easy to read; this should be clear in the
 photograph of the finished board.
@@ -227,7 +227,7 @@ Pin 1 should be in the lower right corner.  This is marked with a small white do
 
 ### 3253 Multiplexer U3
 
-No marking for Pin 1 is on the board.  Pin 1 is at the upper left.  The part I used has a bar on the Pin 1 end.  So the part is placed
+Pin 1 is at the upper left.  The part I used has a bar on the Pin 1 end.  So the part is placed
 with the bar up, towards the flip-flop device.
 
 ### Instrumentation Amplifiers AD8226 U5 and U6
@@ -244,8 +244,9 @@ Don't place R30 which is the 3.3 volt jumper.
 
 ### Bottom Side Parts
 
-There are 3 capacitors and 1 resistor on the bottom side.  These should be soldered last.  I was able to use a hot air gun without
-any problems with the top-side components desoldering.
+There are 3 capacitors and 1 resistor on the bottom side.  These should be soldered last.  I was able to use a hot air gun without any problems with the top-side components desoldering.
+
+R16 is placed on the bottom side in the case of using only one of the reference voltage regulators.
 
 ### SMA Connectors
 
@@ -266,6 +267,10 @@ Links to photos of a fully constructed QSD2 follow.
 <https://drive.google.com/file/d/1DRWaFW7d4UvI1i016jCJsevu2qg0vANx/view?usp=sharing>
 
 <https://drive.google.com/file/d/14mD85wMKtzQJTBV6h13MQaz7uZWobGtN/view?usp=sharing>
+
+Please note that the above photos show a version 1.0 board.  The Gerber files are for
+a revised version 1.1.  The only significant difference is the placement of a 0 ohm resistor
+on the back side to allow optional sharing of a single 2.5 volt reference source.
 
 ### Main Board Wire for Flip-Flop Reset
 
@@ -294,5 +299,7 @@ Rod took the original T41 SDT design and evolved it into a high-performance digi
 4.  "The Lentz Receiver: Tayloe Evolved" by H. Scott Lentz, AG7FF.  An interesting discussion of several design features of the
 "Lentz Receiver" which improve the performance of the typical "Tayloe Detector" style HF receiver.
 <https://www.arrl.org/files/file/QEX_Next_Issue/2023/05%20may-jun%202023/05%202023%20TofC.pdf>
+5.  The QSD4 which is very similar to the QSD2:
+<https://github.com/Greg-R/qsd4>
 
 
