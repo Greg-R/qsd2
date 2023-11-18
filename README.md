@@ -208,8 +208,7 @@ In general, QSD2 is easier to build than the original V010/V011 series boards.  
 build errors.
 
 The most probable error(s) are incorrect orientation of the flip-flop, multiplexer, transformer, and instrumentation amplifier devices.
-The pin 1 markings on the devices are very difficult to see.  Unfortunately, the pin 1 marks on the V1.0 PCB are missing for U2, the
-multiplexer, and for U5, one of the instrumentation ICs.  The transformer markings are easy to read; this should be clear in the
+The pin 1 markings on the devices are very difficult to see.  The transformer markings are easy to read; this should be clear in the
 photograph of the finished board.
 
 There are also 3 leaded electrolytic capacitors.  The markings for these parts are clear on the PCB.
