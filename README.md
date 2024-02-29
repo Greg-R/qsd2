@@ -1,9 +1,9 @@
-# QSD2
+# QSD2 Version 1.1
 
 This is the PCB for the QSD2 receiver module for the T41 "Software Defined Transceiver".
-The PCB was designed using the open-source design tool Kicad 7.
+The PCB was designed using the open-source design tool Kicad 8.
 
-The QSD2 evolved from the original V010 design which remains the most recently published
+The QSD2 evolved from the original T41 V010 design which remains the most recently published
 receiver module for the T41 Software Defined Transceiver.
 
 The goals of the QSD2 are to improve receiver performance, and in particular, the performance
@@ -18,6 +18,19 @@ A PDF of the schematic (qsd2.pdf) is included for quick viewing of the circuit d
 Please note that the components used in this design increase the cost compared to the
 original design.  However, the board is easier to build.  A link to a public Digikey
 BOM is included so that the prospective builder can evaluate the cost before proceeding.
+
+## Version 1.1 Changes
+
+Version 1.1 is a minor revision of Version 1.0.  Here is a list of the changes:
+
+1.  5.0 volt regulator is added.
+2.  Removed unnecessary 3.3 volt and 5.0 volt supply decoupling components.
+3.  Removed the option for 3.3 or 5.0 volt quadrature generator.  5.0 volt rated
+    components are required.
+4.  RF input layout is optimized for slightly improved maximum frequency response.
+5.  The IQ output connector is rotated 90 degrees to match the QSE2 board.
+6.  Low ESR bypass capacitors are recommended to improve noise rejection.  These
+    parts are included in the revised BOM.
 
 ## Divide-by-2 versus Divide-by-4
 
@@ -62,7 +75,7 @@ using an inverter integrated circuit:
 
 <https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf>
 
-So providing the inverted clock signal is easy.  However, one solution creates a new problem!
+So providing the inverted clock signal is easy.  However, this solution creates a new problem!
 The inverter creates a small delay in the inverted signal.  This affects the quality of the quadrature.
 However, this is easy to compensate for.  Simply add another inverter to the output to "match" the delays.
 So we have to add two these inexpensive devices in addition to the same flip-flop device used by divide-by-4.
@@ -70,7 +83,8 @@ So we have to add two these inexpensive devices in addition to the same flip-flo
 The divide-by-2 circuit was simulated and found to produce acceptable quadrature.
 
 For optimal quadrature circuit performance, the coaxial cable between the Main board and the QSD2 should be
-as short as possible.
+as short as possible.  Note that the output of the Si5351 synthesizer IC is 3.3 volts.  This is used to drive
+5.0 volt logic.  This is not ideal, but it has been shown to work in practice.
 
 ### Software Modifications
 
@@ -93,7 +107,22 @@ There is no change to the calibration code.  In fact, the divide factors can be 
 QSD2 can be used with a divide-by-4 QSE.  As long as the correct divide factors are used, calibration will work
 perfectly.
 
-A link to the modified T41 software will be posted here soon.
+The T41EEE (Extreme Experimenter's Edition) software includes the software modification for QSD2.  To allow
+operation with QSD2, the division ratio which is found in the file MyConfigurationFile.h must be modified as follows:
+
+// Set multiplication factors for your QSD and QSE boards.
+#define MASTER_CLK_MULT_RX 4
+#define MASTER_CLK_MULT_TX 4
+
+change to
+
+// Set multiplication factors for your QSD and QSE boards.
+#define MASTER_CLK_MULT_RX 2
+#define MASTER_CLK_MULT_TX 4
+
+T41EEE software is available here:
+
+<https://github.com/Greg-R/T41EEE>
 
 ## A Summary of Methods to Extend the T41 Frequency Range
 
@@ -148,11 +177,14 @@ This requires an input transformer with a tapped secondary:
 The tapped secondary provides the means of applying a common-mode bias to the demodulator device.
 Using this ready-made transformer means no toroid winding!  However, it is expensive:  US$6.25.
 
+Note that other MiniCircuits transformers in the same package may work such as the ADT1-1WT+.  This particular
+part has the center-tap on the output side.  The layout will accommodate this.
+
 ### Balanced Output Summing Capacitors
 
 The output of the demodulator uses "differential mode" integration capacitors.  The idea here is to balance
-the output circuit to the highest degree possible.  The capacitors should be specified to 1% tolerance.  The typical
-shunt capacitors are also provided.  The capacitor values in this circuit may be further optimized.
+the output circuit to the highest degree possible.  The capacitors should be specified to 1% tolerance.
+Shunt capacitors are also used in the circuit.  The capacitor values in this circuit are subject to future optimization.
 
 ### Instrumentation Amplifiers
 
@@ -167,14 +199,14 @@ A disadvantage of the instrumentation amplifiers is higher cost.  The AD8226 dev
 ### Power Supply Decoupling
 
 The power supplies routed through the 16 wire ribbon cable are prone to noise, most likely from the Main board.
-Extra decoupling components were added to clean up the power supplies.  This has been noted in a lower noise floor
-of the displayed spectrum.
+Extra decoupling components were added to clean up the power supplies.  A lower noise floor has been observed
+of the displayed spectrum versus a V10 QSD board.
 
-### Option for 3.3 or 5.0 Volts Biasing
+### Power Supply Regulator
 
-A zero ohm jumper is placed to select either 3.3 or 5.0 volt supply bias to the quadrature and demodulator devices.
-It is also necessary to change the instrumentation amplifier reference regulators depending on the the chosen bias voltage.
-Use 1.8 volt regulators with 3.3 volt bias, or a 2.5 volt regulator with 5.0 volt bias.
+The version 1.1 QSD2 adds a 5 volt regulator to the circuit.  This was added to make sure the instrumentation amplifiers
+have a clean 5 volt supply.  Another benefit is that power dissipated in the 5 volt regulator of the power supply board is
+reduced; not by a lot, but at least it is going in the right direction.
 
 ### Connectors
 
@@ -183,8 +215,8 @@ connectors to improve coaxial cable routing.  The 16 pin IDC connector is the sa
 
 ### PCB Layout
 
-The PCB layout was completed using Kicad version 7.  This is an open-source tool, unlike the "Dip Trace" commercial product used
-to design the V010 and also the V012 boards.
+The PCB layout was completed using Kicad version 8.  This is an open-source tool, unlike the "Dip Trace" commercial product used
+to design the V010 and other T41 boards.
 
 The layout in the quadrature generator and demodulator areas was very carefully routed for maximum frequency performance.
 The QSD2 is approximately the same board size as V010, but there is enough area to add additional circuitry if desired.
@@ -197,8 +229,6 @@ A public Digikey BOM is here:
 
 <https://www.digikey.com/en/mylists/list/K5OIGZF85K>
 
-This BOM includes parts to build a board with 5.0 volt biasing.  This is assumed to be the highest performance configuration.
-
 Please note that specific parts may or may not be available when attempting to order.  It is the responsibility of the builder
 to find subsitutes as required.
 
@@ -210,8 +240,6 @@ build errors.
 The most probable error(s) are incorrect orientation of the flip-flop, multiplexer, transformer, and instrumentation amplifier devices.
 The pin 1 markings on the devices are very difficult to see.  The transformer markings are easy to read; this should be clear in the
 photograph of the finished board.
-
-There are also 3 leaded electrolytic capacitors.  The markings for these parts are clear on the PCB.
 
 Here are details on each part with regards to proper orientation of the board.  The descriptions are viewing the top side of the board,
 with the "T41 EXPERIMENTERS PLATFORM" near the bottom of the board in normal left-to-right reading orientation.
@@ -229,6 +257,11 @@ Pin 1 should be in the lower right corner.  This is marked with a small white do
 Pin 1 is at the upper left.  The part I used has a bar on the Pin 1 end.  So the part is placed
 with the bar up, towards the flip-flop device.
 
+### R6 10 Ohm or Ferrite Bead
+
+This part is probably better as a 10 Ohm resistor.  A higher value is possible, which would further attenuate power supply noise.
+The voltage drop across the resistor has not been measured, and the value of R6 is subject to further optimization.
+
 ### Instrumentation Amplifiers AD8226 U5 and U6
 
 Only U5 has the Pin 1 indicated with a dot on the PCB.  However, both parts are oriented the same, with Pin 1 towards the upper left.
@@ -236,16 +269,13 @@ There is a dot on the parts to indicated Pin 1, however, it is very hard to see.
 
 ### Non-placed Parts
 
-C20 and C21 are not used.
-
-R29 and R30 are zero-ohm jumpers.  Place R29 for 5.0 volt bias on the quadrature generator.  This is the recommended configuration.
-Don't place R30 which is the 3.3 volt jumper.
+C20 and C21 are "DNP" (Do Not Place).  These parts were intended to be used as RF bypass capcitors if necessary.  So far, this is not a problem.
 
 ### Bottom Side Parts
 
-There are 3 capacitors and 1 resistor on the bottom side.  These should be soldered last.  I was able to use a hot air gun without any problems with the top-side components desoldering.
+There are 4 capacitors on the bottom side.  These should be soldered last.  I was able to use a hot air gun without any problems with the top-side components desoldering.
 
-R16 is placed on the bottom side in the case of using only one of the reference voltage regulators.
+R16 (O ohm) is placed on the bottom side in the case of using only one of the 2.5 volt voltage regulators.  This modification has not been evaluated yet, so R16 is labelled as "DNP" (Do Not Place).
 
 ### SMA Connectors
 
@@ -259,17 +289,9 @@ Please note that the cable from the Main board to J1, which is the receive local
 
 Links to photos of a fully constructed QSD2 follow.
 
-<https://drive.google.com/file/d/1xf6yhk0A5sCjX5wh1JE4dn1bHuM8j0T6/view?usp=sharing>
+<https://drive.google.com/file/d/1XmEzX6fYmMjZtCuPrj_bD8YfRSP8r1Cy/view?usp=sharing>
 
-<https://drive.google.com/file/d/1N_Db95VSrJVtja7tjd8az9CCwICfp4F0/view?usp=sharing>
-
-<https://drive.google.com/file/d/1DRWaFW7d4UvI1i016jCJsevu2qg0vANx/view?usp=sharing>
-
-<https://drive.google.com/file/d/14mD85wMKtzQJTBV6h13MQaz7uZWobGtN/view?usp=sharing>
-
-Please note that the above photos show a version 1.0 board.  The Gerber files are for
-a revised version 1.1.  The only significant difference is the placement of a 0 ohm resistor
-on the back side to allow optional sharing of a single 2.5 volt reference source.
+<https://drive.google.com/file/d/1RXFwcmE2U3pgW8C_lg-2-wzK6qM8bwK8/view?usp=sharing>
 
 ### Main Board Wire for Flip-Flop Reset
 
@@ -298,7 +320,4 @@ Rod took the original T41 SDT design and evolved it into a high-performance digi
 4.  "The Lentz Receiver: Tayloe Evolved" by H. Scott Lentz, AG7FF.  An interesting discussion of several design features of the
 "Lentz Receiver" which improve the performance of the typical "Tayloe Detector" style HF receiver.
 <https://www.arrl.org/files/file/QEX_Next_Issue/2023/05%20may-jun%202023/05%202023%20TofC.pdf>
-5.  The QSD4 which is very similar to the QSD2:
-<https://github.com/Greg-R/qsd4>
-
 
