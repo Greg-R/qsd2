@@ -8077,7 +8077,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 125.095 46.99 0)
 			(effects
 				(font
@@ -8518,7 +8518,7 @@
 				)
 			)
 		)
-		(property "Footprint" "16TSOP:R_8_ADI"
+		(property "Footprint" "AD8226:R_8_ADI"
 			(at 193.04 127.635 0)
 			(effects
 				(font
@@ -13315,7 +13315,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm"
 			(at 111.76 104.14 0)
 			(effects
 				(font
@@ -13763,7 +13763,7 @@
 				)
 			)
 		)
-		(property "Footprint" "16TSOP:R_8_ADI"
+		(property "Footprint" "AD8226:R_8_ADI"
 			(at 193.675 83.82 0)
 			(effects
 				(font
