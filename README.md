@@ -311,7 +311,7 @@ Here is a list of sources which inspired the design of the QSD2:
 
 1.  "Digital Signal Processing and Software Defined Radio, Theory and Construction of the T41-EP Software Defined Transceiver",
 by Albert F. Peter, AC8GY, and Dr. Jack Purdum, W8TEE.  This is the ultimate resource for builders of the T41 Software Defined
-Transceiver:  <https://www.amazon.com/Software-Defined-Radio-Transceiver-Construction/dp/B09WYP1ST8>
+Transceiver:  <https://www.amazon.com/Digial-Signal-Processing-Software-Defined/dp/B0D1JH5L65>
 2.  "A Software Defined Radio for the Masses, Part 4" by Gerald Youngblood, AC5OG.  This shows the circuit for the double-balanced
 demodulator circuit and the use of instrumentation amplifiers on the output circuit.
 <https://www.arrl.org/files/file/Technology/tis/info/pdf/030304qex020.pdf>
