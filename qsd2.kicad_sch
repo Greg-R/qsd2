@@ -2841,8 +2841,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "TR"
-				(at 0 6.35 0)
+			(property "Reference" "TR1"
+				(at 0 10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2850,7 +2850,7 @@
 				)
 			)
 			(property "Value" "ADT4-6T"
-				(at 0 -6.35 0)
+				(at 0 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3072,6 +3072,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3678,6 +3696,12 @@
 				)
 			)
 		)
+	)
+	(junction
+		(at 91.44 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "064e5407-fe4c-4e2e-bff1-ce0aef17f9d1")
 	)
 	(junction
 		(at 111.76 77.47)
@@ -5459,7 +5483,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 96.52) (xy 91.44 81.28)
+			(xy 91.44 96.52) (xy 91.44 88.9)
 		)
 		(stroke
 			(width 0)
@@ -5556,6 +5580,16 @@
 			(type default)
 		)
 		(uuid "ac4d395a-f6e7-4208-b95f-b5d66c9e4244")
+	)
+	(wire
+		(pts
+			(xy 76.835 88.9) (xy 91.44 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acf0b43b-7cdc-44c2-952e-c0125fc617e6")
 	)
 	(wire
 		(pts
@@ -5889,6 +5923,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.835 96.52) (xy 76.835 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5ebb1b7-8cc1-461c-b03d-512e7445612a")
+	)
+	(wire
+		(pts
 			(xy 90.805 101.6) (xy 92.71 101.6)
 		)
 		(stroke
@@ -5936,6 +5980,16 @@
 			(type default)
 		)
 		(uuid "da965c81-f7d3-46c3-9634-e197325b6df5")
+	)
+	(wire
+		(pts
+			(xy 91.44 88.9) (xy 91.44 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db2ee620-c49b-4d26-85cd-ade74cd49d20")
 	)
 	(wire
 		(pts
@@ -6126,6 +6180,16 @@
 			(type default)
 		)
 		(uuid "ec13a568-f865-4ae0-aa68-5d9df9216eab")
+	)
+	(wire
+		(pts
+			(xy 80.645 96.52) (xy 76.835 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec5e9dee-7ab2-41cd-80f4-c2c9a2ed966c")
 	)
 	(wire
 		(pts
@@ -9126,6 +9190,9 @@
 		)
 		(pin "6"
 			(uuid "89808b3d-15d0-4269-8300-b6334e6488a8")
+		)
+		(pin "2"
+			(uuid "87f06bfd-b8c6-4dd2-b82a-35574940a062")
 		)
 		(instances
 			(project "qsd2"
