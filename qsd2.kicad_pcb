@@ -4275,7 +4275,7 @@
 			)
 		)
 		(property "Value" "2.61k"
-			(at 3.275 0.475 180)
+			(at -1.425 -3.125 180)
 			(layer "F.SilkS")
 			(uuid "a8f62ca6-4bf4-40a9-a592-732dcf8cca94")
 			(effects
