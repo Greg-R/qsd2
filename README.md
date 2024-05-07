@@ -134,7 +134,7 @@ and another clock output is shifted by 90 degrees.  This is directly applied to 
 and thus this circuit is very simple.  This also exploits the maximum upper frequency range of the Si5351 phase-lock-loop IC.  
 On the other hand, this introduces a low frequency limit and it may not be possible to cover the LF and VLF amateur bands with this scheme.
 
-## Other Changes to the QSD2 Circuit Design
+## Other Changes to the QSD2EZ Circuit Design
 
 The QSD2EZ receiver module circuitry is almost entirely revised compared to its ancestor the V010 QSD.
 
