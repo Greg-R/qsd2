@@ -1,12 +1,16 @@
-# QSD2 Version 1.1
+# QSD2EZ Low Connector Version 1.0
 
-This is the PCB for the QSD2 receiver module for the T41 "Software Defined Transceiver".
+This is the PCB for the QSD2EZ receiver module for the T41 "Software Defined Transceiver".
 The PCB was designed using the open-source design tool Kicad 8.
 
-The QSD2 evolved from the original T41 V010 design which remains the most recently published
+QSD2EZ changes the TSOP packaged parts to SOIC for easier soldering.
+
+This is the "Low Connector" version with the 16-pin connector in a lower position on the PCB.
+
+The QSD2EZ evolved from the original T41 V010 design which remains the most recently published
 receiver module for the T41 Software Defined Transceiver.
 
-The goals of the QSD2 are to improve receiver performance, and in particular, the performance
+The goals of the QSD2EZ are to improve receiver performance, and in particular, the performance
 in the 10 meter amateur radio band.  Please note that the designer of this project does not
 own a laboratory full of expensive test equipment.  Much of the verification of the receiver
 performance has been done "on the air".  There are no guarantees or other warranties of the
@@ -18,19 +22,6 @@ A PDF of the schematic (qsd2.pdf) is included for quick viewing of the circuit d
 Please note that the components used in this design increase the cost compared to the
 original design.  However, the board is easier to build.  A link to a public Digikey
 BOM is included so that the prospective builder can evaluate the cost before proceeding.
-
-## Version 1.1 Changes
-
-Version 1.1 is a minor revision of Version 1.0.  Here is a list of the changes:
-
-1.  5.0 volt regulator is added.
-2.  Removed unnecessary 3.3 volt and 5.0 volt supply decoupling components.
-3.  Removed the option for 3.3 or 5.0 volt quadrature generator.  5.0 volt rated
-    components are required.
-4.  RF input layout is optimized for slightly improved maximum frequency response.
-5.  The IQ output connector is rotated 90 degrees to match the QSE2 board.
-6.  Low ESR bypass capacitors are recommended to improve noise rejection.  These
-    parts are included in the revised BOM.
 
 ## Divide-by-2 versus Divide-by-4
 
@@ -59,7 +50,7 @@ One page the same specification is shown for Vcc = 5.0 volts, and the maximum in
 This shows a method to increase the frequency range, however, a matching 5.0 volt specified multiplexer
 must be used.  A 5.0 volt multiplexer is in fact available at no cost penalty.
 
-QSD2 resolves the high frequency problem by using a divide-by-2 quadrature circuit.  The frequency is now:
+QSD2EZ resolves the high frequency problem by using a divide-by-2 quadrature circuit.  The frequency is now:
 
 (28.510 MHz + 48 kHz) * 2 = 57.116 MHz
 
@@ -92,7 +83,7 @@ Another complication of the divide-by-two is that the circuit must be properly r
 of the local oscillator signal.  If the reset is not executed, the circuit may produce inverted quadrature
 or it may not function at all.
 
-Thus a reset signal must be provided to the QSD2 board.
+Thus a reset signal must be provided to the QSD2EZ board.
 
 This turned out to be easy to implement.  The QSD is designed to be powered from the 16 pin ribbon cable which
 connects all of the radio's modules together to a common power supply.  There are unused pins, and one them is
@@ -104,11 +95,11 @@ signal at radio power-up.  That is all that is required to guarantee that the di
 properly initialized.  This is a common and practically universal requirement for digital circuitry.
 
 There is no change to the calibration code.  In fact, the divide factors can be mixed.  For example, a divide-by-2
-QSD2 can be used with a divide-by-4 QSE.  As long as the correct divide factors are used, calibration will work
+QSD2EZ can be used with a divide-by-4 QSE.  As long as the correct divide factors are used, calibration will work
 perfectly.
 
-The T41EEE (Extreme Experimenter's Edition) software includes the software modification for QSD2.  To allow
-operation with QSD2, the division ratio which is found in the file MyConfigurationFile.h must be modified as follows:
+The T41EEE (Extreme Experimenter's Edition) software includes the software modification for QSD2EZ.  To allow
+operation with QSD2EZ, the division ratio which is found in the file MyConfigurationFile.h must be modified as follows:
 
 // Set multiplication factors for your QSD and QSE boards.
 #define MASTER_CLK_MULT_RX 4
@@ -145,7 +136,7 @@ On the other hand, this introduces a low frequency limit and it may not be possi
 
 ## Other Changes to the QSD2 Circuit Design
 
-The QSD2 receiver module circuitry is almost entirely revised compared to its ancestor the V010 QSD.
+The QSD2EZ receiver module circuitry is almost entirely revised compared to its ancestor the V010 QSD.
 
 ### RF Amplifier
 
@@ -169,7 +160,7 @@ Thus the front-end gain can be adjusted to optimize both receiver sensitivity an
 
 ### Double-Balanced Quadrature Sampling Demodulator
 
-The original V010 demodulator circuit is a single-balanced design.  The QSD2 is upgraded to double-balanced.
+The original V010 demodulator circuit is a single-balanced design.  The QSD2EZ is upgraded to double-balanced.
 This requires an input transformer with a tapped secondary:
 
 <https://www.minicircuits.com/pdfs/ADT4-6T+.pdf>
@@ -219,7 +210,7 @@ The PCB layout was completed using Kicad version 8.  This is an open-source tool
 to design the V010 and other T41 boards.
 
 The layout in the quadrature generator and demodulator areas was very carefully routed for maximum frequency performance.
-The QSD2 is approximately the same board size as V010, but there is enough area to add additional circuitry if desired.
+The QSD2EZ is approximately the same board size as V010, but there is enough area to add additional circuitry if desired.
 
 The prototype PCBs were fabricated by PCBWay at a cost of US$1.00 each.  Shipping was about US$25.00 for quantity 5 boards.
 
@@ -227,14 +218,14 @@ The prototype PCBs were fabricated by PCBWay at a cost of US$1.00 each.  Shippin
 
 A public Digikey BOM is here:
 
-<https://www.digikey.com/en/mylists/list/K5OIGZF85K>
+<https://www.digikey.com/en/mylists/list/H6I5D3KRKF>
 
 Please note that specific parts may or may not be available when attempting to order.  It is the responsibility of the builder
 to find subsitutes as required.
 
 ## Build Tips
 
-In general, QSD2 is easier to build than the original V010/V011 series boards.  There are a few items to be aware of to avoid
+In general, QSD2EZ is easier to build than the original V010/V011 series boards.  There are a few items to be aware of to avoid
 build errors.
 
 The most probable error(s) are incorrect orientation of the flip-flop, multiplexer, transformer, and instrumentation amplifier devices.
@@ -283,15 +274,17 @@ Take a good look at the placement of the board in your T41 radio.  You will want
 easy coaxial cable routing.  I used 90 degree connectors as this was the easiest for extensive testing, but not necessarily the best for
 permanent installation.  Also, you may choose to put the SMAs on one side or the other for optimal cable routing.
 
+The SMA connectors in the BOM are 90 degree.
+
 Please note that the cable from the Main board to J1, which is the receive local oscillator, should be as short as possible.
 
-### High Resolution Photos of QSD2
+### High Resolution Photos of QSD2EZ
 
 Links to photos of a fully constructed QSD2 follow.
 
-<https://drive.google.com/file/d/1XmEzX6fYmMjZtCuPrj_bD8YfRSP8r1Cy/view?usp=sharing>
+<https://drive.google.com/file/d/1tSA4som2rKoXd4S47d4M2jIhxy442lnv/view?usp=sharing>
 
-<https://drive.google.com/file/d/1RXFwcmE2U3pgW8C_lg-2-wzK6qM8bwK8/view?usp=sharing>
+<https://drive.google.com/file/d/1_YMvSB4WzaHatplPvFDWoiFThJTk3co3/view?usp=sharing>
 
 ### Main Board Wire for Flip-Flop Reset
 
@@ -306,8 +299,8 @@ Here is a high resolution image of the Main board.  The reset wire is blue.
 
 ## References and Further Reading
 
-The QSD2 is an attempt to integrate the best circuits from several sources into a high-performance HF receiver module.
-Here is a list of sources which inspired the design of the QSD2:
+The QSD2EZ is an attempt to integrate the best circuits from several sources into a high-performance HF receiver module.
+Here is a list of sources which inspired the design of the QSD2EZ:
 
 1.  "Digital Signal Processing and Software Defined Radio, Theory and Construction of the T41-EP Software Defined Transceiver",
 by Albert F. Peter, AC8GY, and Dr. Jack Purdum, W8TEE.  This is the ultimate resource for builders of the T41 Software Defined

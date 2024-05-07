@@ -5,9 +5,9 @@
 	(uuid "e85a7744-7948-44f7-b41f-dd9b75249984")
 	(paper "A4")
 	(title_block
-		(title "QSD2 with Divide-by-Two Quadrature Double-Balanced")
-		(date "2024-02-29")
-		(rev "1.1")
+		(title "QSD2EZ with Divide-by-Two Quadrature Double-Balanced")
+		(date "2024-05-07")
+		(rev "1.0")
 	)
 	(lib_symbols
 		(symbol "2023-10-04_14-23-21:AD8226ARZ-R7"
@@ -6511,7 +6511,7 @@
 		)
 		(uuid "b8b389a8-ceb7-42b9-b267-4b151d18a2f7")
 	)
-	(text "QSD with Divide-by-Two Quadrature Double-Balanced"
+	(text "QSD2EZ with Divide-by-Two Quadrature Double-Balanced"
 		(exclude_from_sim no)
 		(at 72.39 22.225 0)
 		(effects
@@ -9141,7 +9141,7 @@
 				)
 			)
 		)
-		(property "Value" "ADT4-6T"
+		(property "Value" "ADT4-6T+"
 			(at 85.725 104.14 0)
 			(effects
 				(font
