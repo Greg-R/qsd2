@@ -9077,7 +9077,7 @@
 				)
 			)
 		)
-		(property "Value" "ADT4-6T"
+		(property "Value" "ADT4-6T+"
 			(at 85.725 104.14 0)
 			(effects
 				(font
