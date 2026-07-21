@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "QSD2EZ with Divide-by-Two Quadrature Double-Balanced")
-		(date "2026-07-02")
+		(date "2026-07-21")
 		(rev "1.2")
 	)
 	(lib_symbols
@@ -11023,7 +11023,7 @@
 				)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "20"
 			(at 67.945 163.83 90)
 			(show_name no)
 			(do_not_autoplace no)

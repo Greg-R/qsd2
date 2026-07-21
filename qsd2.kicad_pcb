@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "QSD Divide by Two")
-		(date "2026-07-02")
+		(date "2026-07-21")
 		(rev "V1.2")
 	)
 	(layers
@@ -673,7 +673,7 @@
 		)
 		(property "Value" "1uF"
 			(at 4.625 0 180)
-			(layer "F.Fab")
+			(layer "F.SilkS")
 			(uuid "f51c10d4-3562-43a2-a8a5-9dea62e065c1")
 			(effects
 				(font
@@ -967,7 +967,7 @@
 				)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "20"
 			(at -0.05 -1.6 0)
 			(layer "F.SilkS")
 			(uuid "1461e70c-1376-4488-9da2-63e3be1a8655")
@@ -3416,7 +3416,7 @@
 		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R5"
-			(at -0.8875 -1.75 0)
+			(at -0.9875 -1.75 0)
 			(layer "F.SilkS")
 			(uuid "858a5d33-83f0-4735-88a2-ab66ed76fdbe")
 			(effects
@@ -3427,7 +3427,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 1.2125 -1.75 0)
+			(at 1.4125 -1.75 0)
 			(layer "F.SilkS")
 			(uuid "5a150ca7-cd61-436d-8577-a0e2044dec6f")
 			(effects
