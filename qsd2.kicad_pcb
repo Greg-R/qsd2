@@ -8,7 +8,7 @@
 	)
 	(paper "A4")
 	(title_block
-		(title "QSD Divide by Two")
+		(title "QSD2EZ Divide by Two Quadrature Generator")
 		(date "2026-07-21")
 		(rev "V1.2")
 	)

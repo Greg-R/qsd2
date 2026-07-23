@@ -5,7 +5,7 @@
 	(uuid "e85a7744-7948-44f7-b41f-dd9b75249984")
 	(paper "A4")
 	(title_block
-		(title "QSD2EZ with Divide-by-Two Quadrature Double-Balanced")
+		(title "QSD2EZ with Divide-by-Two Quadrature Generator")
 		(date "2026-07-21")
 		(rev "1.2")
 	)
@@ -4385,9 +4385,9 @@
 		)
 		(uuid "61526b96-5aef-4a0f-9754-f7c3415cd662")
 	)
-	(text "DOUBLE-BALANCED QSD"
+	(text "QUADRATURE SAMPLER"
 		(exclude_from_sim no)
-		(at 85.344 136.398 0)
+		(at 89.535 135.89 0)
 		(effects
 			(font
 				(size 2 2)
@@ -4397,6 +4397,18 @@
 			(justify left bottom)
 		)
 		(uuid "680c39f3-e97b-4a23-9677-dbc88ae9ade4")
+	)
+	(text "PLEASE NOTE THIS IS A 5.0 VOLT FLIP-FLOP!"
+		(exclude_from_sim no)
+		(at 141.605 66.04 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "681f0a88-a9e5-4ab6-95a8-fdec40774194")
 	)
 	(text "QUADRATURE GENERATOR"
 		(exclude_from_sim no)
@@ -4492,7 +4504,7 @@
 		)
 		(uuid "c32c2a1f-c036-4046-8899-3f031ec26efc")
 	)
-	(text "QSDEZ with Divide-by-Two Quadrature Double-Balanced"
+	(text "QSDEZ with Divide-by-Two Quadrature Generator"
 		(exclude_from_sim no)
 		(at 83.82 20.828 0)
 		(effects
