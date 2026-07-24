@@ -9272,7 +9272,7 @@
 		(fields_autoplaced yes)
 		(uuid "21755505-9441-42c9-93ab-a521f2fab564")
 		(property "Reference" "U4"
-			(at 153.035 23.495 0)
+			(at 153.035 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9281,8 +9281,8 @@
 				)
 			)
 		)
-		(property "Value" "SN74AC74PW"
-			(at 153.035 26.035 0)
+		(property "Value" "MC74LCX74DR2G"
+			(at 153.035 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
